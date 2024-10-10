@@ -30,5 +30,10 @@ namespace OrganisationConferention
             ComboType.ItemsSource = allTypes;
             ComboType.SelectedIndex = 0;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new Autorization());
+        }
     }
 }

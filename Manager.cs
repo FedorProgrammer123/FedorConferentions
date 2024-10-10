@@ -10,5 +10,6 @@ namespace OrganisationConferention
     public static class Manager
     {
         public static Frame MainFrame { get; set; }
+        public static Users Users { get; set; }
     }
 }

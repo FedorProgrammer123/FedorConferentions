@@ -22,3 +22,5 @@ D:\C# Projects\OrganisationConferention\bin\Debug\EntityFramework.SqlServer.xml
 D:\C# Projects\OrganisationConferention\bin\Debug\ru\EntityFramework.resources.dll
 D:\C# Projects\OrganisationConferention\obj\Debug\OrganisationConferention_Content.g.cs
 D:\C# Projects\OrganisationConferention\obj\Debug\Organisa.F16AB863.Up2Date
+D:\C# Projects\OrganisationConferention\obj\Debug\Autorization.g.cs
+D:\C# Projects\OrganisationConferention\obj\Debug\Autorization.baml

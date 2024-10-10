@@ -49,7 +49,7 @@
             </ListView.ItemTemplate>
         </ListView>
         <StackPanel Grid.Row="2">
-            <Button Grid.Row="1" Content="Авторизация" Width="100" HorizontalAlignment="Left" FontFamily="Comic Sans MS" Background="#27c451"></Button>
+            <Button Grid.Row="1" Content="Авторизация" Width="100" HorizontalAlignment="Left" FontFamily="Comic Sans MS" Background="#27c451" Click="Button_Click"></Button>
         </StackPanel>
     </Grid>
 </Page>
