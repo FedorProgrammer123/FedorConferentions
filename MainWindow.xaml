@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OrganisationConferention"
         mc:Ignorable="d"
-        Title="Организация_конференций_2023" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="Система, предназначенная для организаторов конференций по информационной безопасности" MinHeight="450" Height="450" Width="900" MaxWidth="1900" MinWidth="900" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Background="#1eb045">
-            <Label Content="Организация_конференций_2023" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Comic Sans MS" FontWeight="Bold"></Label>
+        <Grid Grid.Row="0">
+            <Label Content="Система, предназначенную для организаторов конференций по информационной безопасности" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Comic Sans MS" FontWeight="Bold"></Label>
         </Grid>
-        <Frame x:Name="MainFrame" Grid.Row="2"></Frame>
+        <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"></Frame>
     </Grid>
 </Window>

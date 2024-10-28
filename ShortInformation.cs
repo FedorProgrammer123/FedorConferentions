@@ -31,13 +31,13 @@ namespace OrganisationConferention
         public Nullable<int> Winner { get; set; }
     
         public virtual Activity Activity1 { get; set; }
-        public virtual Jury Jury { get; set; }
-        public virtual Jury Jury6 { get; set; }
-        public virtual Jury Jury7 { get; set; }
-        public virtual Jury Jury8 { get; set; }
-        public virtual Jury Jury9 { get; set; }
-        public virtual Moderators Moderators { get; set; }
-        public virtual Participants Participants { get; set; }
         public virtual PlanEvent PlanEvent { get; set; }
+        public virtual Users Users { get; set; }
+        public virtual Users Users1 { get; set; }
+        public virtual Users Users2 { get; set; }
+        public virtual Users Users3 { get; set; }
+        public virtual Users Users4 { get; set; }
+        public virtual Users Users5 { get; set; }
+        public virtual Users Users6 { get; set; }
     }
 }

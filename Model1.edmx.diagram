@@ -4,50 +4,33 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="84d627b802954d5ca9ce43c016baf834" Name="Diagram1">
-        <EntityTypeShape EntityType="FedorConferentionModel.Activity" Width="1.5" PointX="6" PointY="16.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="FedorConferentionModel.Cities" Width="1.5" PointX="6" PointY="27.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="FedorConferentionModel.City" Width="1.5" PointX="3.75" PointY="24.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="FedorConferentionModel.Countries" Width="1.5" PointX="0.75" PointY="12.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="FedorConferentionModel.Direction" Width="1.5" PointX="3.75" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="FedorConferentionModel.Events" Width="1.5" PointX="3.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="FedorConferentionModel.Gendre" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="FedorConferentionModel.Jury" Width="1.5" PointX="3" PointY="11.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="FedorConferentionModel.Moderators" Width="1.5" PointX="6" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="FedorConferentionModel.Organizers" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="FedorConferentionModel.Participants" Width="1.5" PointX="3" PointY="17.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="FedorConferentionModel.PlanEvent" Width="1.5" PointX="6" PointY="24" IsExpanded="true" />
-        <EntityTypeShape EntityType="FedorConferentionModel.Role" Width="1.5" PointX="3.75" PointY="21.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="FedorConferentionModel.ShortInformation" Width="1.5" PointX="8.25" PointY="13.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="FedorConferentionModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="FedorConferentionModel.Users" Width="1.5" PointX="6" PointY="6.625" IsExpanded="true" />
+      <Diagram DiagramId="f1fbae93587248d29ba989757c8c1263" Name="Diagram1">
+        <EntityTypeShape EntityType="FedorConferentionModel.Activity" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FedorConferentionModel.City" Width="1.5" PointX="0.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FedorConferentionModel.Countries" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FedorConferentionModel.Direction" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FedorConferentionModel.Events" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FedorConferentionModel.Gendre" Width="1.5" PointX="0.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="FedorConferentionModel.PlanEvent" Width="1.5" PointX="3" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FedorConferentionModel.Role" Width="1.5" PointX="0.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FedorConferentionModel.ShortInformation" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FedorConferentionModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FedorConferentionModel.Users" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
         <AssociationConnector Association="FedorConferentionModel.FK_ShortInformation_Activity" ManuallyRouted="false" />
-        <AssociationConnector Association="FedorConferentionModel.FK_Cities_City" ManuallyRouted="false" />
         <AssociationConnector Association="FedorConferentionModel.FK_PlanEvent_City" ManuallyRouted="false" />
-        <AssociationConnector Association="FedorConferentionModel.FK_Jury_Countries" ManuallyRouted="false" />
-        <AssociationConnector Association="FedorConferentionModel.FK_Moderators_Countries" ManuallyRouted="false" />
-        <AssociationConnector Association="FedorConferentionModel.FK_Organizers_Countries" ManuallyRouted="false" />
-        <AssociationConnector Association="FedorConferentionModel.FK_Participants_Countries" ManuallyRouted="false" />
         <AssociationConnector Association="FedorConferentionModel.FK_Users_Countries" ManuallyRouted="false" />
-        <AssociationConnector Association="FedorConferentionModel.FK_Jury_Direction" ManuallyRouted="false" />
-        <AssociationConnector Association="FedorConferentionModel.FK_Moderators_Direction" ManuallyRouted="false" />
         <AssociationConnector Association="FedorConferentionModel.FK_Users_Direction" ManuallyRouted="false" />
-        <AssociationConnector Association="FedorConferentionModel.FK_Moderators_Events" ManuallyRouted="false" />
         <AssociationConnector Association="FedorConferentionModel.FK_Users_Events" ManuallyRouted="false" />
-        <AssociationConnector Association="FedorConferentionModel.FK_Jury_Gendre" ManuallyRouted="false" />
-        <AssociationConnector Association="FedorConferentionModel.FK_Moderators_Gendre" ManuallyRouted="false" />
-        <AssociationConnector Association="FedorConferentionModel.FK_Organizers_Gendre" ManuallyRouted="false" />
-        <AssociationConnector Association="FedorConferentionModel.FK_Participants_Gendre" ManuallyRouted="false" />
         <AssociationConnector Association="FedorConferentionModel.FK_Users_Gendre" ManuallyRouted="false" />
-        <AssociationConnector Association="FedorConferentionModel.FK_ShortInformation_Jury" ManuallyRouted="false" />
+        <AssociationConnector Association="FedorConferentionModel.FK_ShortInformation_PlanEvent" ManuallyRouted="false" />
+        <AssociationConnector Association="FedorConferentionModel.FK_Users_Role" ManuallyRouted="false" />
         <AssociationConnector Association="FedorConferentionModel.FK_ShortInformation_Jury1" ManuallyRouted="false" />
         <AssociationConnector Association="FedorConferentionModel.FK_ShortInformation_Jury2" ManuallyRouted="false" />
         <AssociationConnector Association="FedorConferentionModel.FK_ShortInformation_Jury3" ManuallyRouted="false" />
         <AssociationConnector Association="FedorConferentionModel.FK_ShortInformation_Jury4" ManuallyRouted="false" />
-        <AssociationConnector Association="FedorConferentionModel.FK_ShortInformation_Moderators" ManuallyRouted="false" />
-        <AssociationConnector Association="FedorConferentionModel.FK_ShortInformation_Participants" ManuallyRouted="false" />
-        <AssociationConnector Association="FedorConferentionModel.FK_ShortInformation_PlanEvent" ManuallyRouted="false" />
-        <AssociationConnector Association="FedorConferentionModel.FK_Users_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="FedorConferentionModel.FK_ShortInformation_Jury5" ManuallyRouted="false" />
+        <AssociationConnector Association="FedorConferentionModel.FK_ShortInformation_Moderator" ManuallyRouted="false" />
+        <AssociationConnector Association="FedorConferentionModel.FK_ShortInformation_Winner" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

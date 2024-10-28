@@ -13,7 +13,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 namespace OrganisationConferention
 {
     /// <summary>
@@ -21,15 +23,18 @@ namespace OrganisationConferention
     /// </summary>
     public partial class Autorization : Page
     {
+        private int failedAttempts = 0;
         public Autorization()
         {
             InitializeComponent();
+            
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            var Name = EnterNameBox.Text;
-            var Password = EnterPasswordBox.Password;
+             
+             var Name = EnterNameBox.Text;
+             var Password = EnterPasswordBox.Password;
             using (var model = new Context())
             {
                 var ExsistsName = model.Users.Any(u => u.Email == Name && u.Password == Password);
@@ -57,8 +62,63 @@ namespace OrganisationConferention
                 }
                 else
                 {
-                    MessageBox.Show("Неверный логин или пароль");
+                    
+                    failedAttempts++;
+                    string Error = $"Неверный логин или пароль! Кол-во неверных попыток:{failedAttempts}";
+                    string caption = "Error";
+                    MessageBoxButton button = MessageBoxButton.OK;
+                    MessageBoxImage image = MessageBoxImage.Error;
+                    MessageBoxResult result = MessageBox.Show(Error,caption,button,image);                
+                    if (failedAttempts == 2)
+                    {
+                        ShowCaptchaFields();
+                        GenerateCaptcha();
+                    }             
+                   
                 }
+            }
+        }
+        private void GenerateCaptcha()
+        {
+            string allowChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
+            string captcha = "";
+            Random random = new Random();
+
+            for (int i = 0; i < 4; i++)
+            {
+                captcha += allowChars[random.Next(allowChars.Length)];
+            }
+
+            CaptchaBox.Text = captcha;
+        }
+        private void ShowCaptchaFields()
+        {
+            LabelCaptcha.Visibility = Visibility.Visible;
+            CaptchaBox.Visibility = Visibility.Visible;
+            CaptchaWriteBox.Visibility = Visibility.Visible;
+            EnterCaptchaButton.Visibility = Visibility.Visible;
+        }
+
+        private async void EnterCaptchaButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!CaptchaWriteBox.Text.Equals(CaptchaBox.Text, StringComparison.Ordinal))
+            {
+                MessageBox.Show("Неверная капча!", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
+                CaptchaWriteBox.Text = "";
+                AutButton.IsEnabled = false;
+                await Task.Delay(10000);
+                AutButton.IsEnabled = true;
+                GenerateCaptcha();
+                
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Капча введена верно. Попробуйте авторизоваться снова");
+                LabelCaptcha.Visibility = Visibility.Collapsed;
+                CaptchaBox.Visibility = Visibility.Collapsed;
+                CaptchaWriteBox.Visibility = Visibility.Collapsed;
+                EnterCaptchaButton.Visibility = Visibility.Collapsed;
             }
         }
     }

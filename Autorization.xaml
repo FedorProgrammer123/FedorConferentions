@@ -5,12 +5,12 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:OrganisationConferention"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="600" d:DesignWidth="800"
       Title="Autorization">
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel VerticalAlignment="Center" Grid.Row="2"
@@ -20,8 +20,27 @@
             <TextBox x:Name="EnterNameBox" HorizontalAlignment="Left" Height="22" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" FontFamily="Comic Sans MS"/>
             <Label Content="Пароль:" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
             <PasswordBox x:Name="EnterPasswordBox" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="300" FontFamily="Comic Sans MS"/>
+           
             <Button Content="Авторизоваться" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="300" Height="36" FontFamily="Comic Sans MS"
-            Margin="0,20,0,0" Click="Button_Click"/>
+            Margin="0,10,0,0" Click="Button_Click" Name="AutButton"/>
+            <Label x:Name="LabelCaptcha" Content="Пройдите капчу:" Visibility="Collapsed"></Label>
+            <TextBox x:Name="CaptchaBox" Width="100" IsEnabled="False" FontWeight="Bold" FontSize="16" Opacity="0.8" Visibility="Collapsed">
+                <TextBox.Background>
+                    <ImageBrush ImageSource="Resources/Logo.png" Stretch="UniformToFill" TileMode="None">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="1" ScaleY="1"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform X="0" Y="0"/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </TextBox.Background>
+            </TextBox>
+            <TextBox x:Name="CaptchaWriteBox" Width="100" Margin="10" Visibility="Collapsed"></TextBox>
+            <Button Content="Ввести капчу" Grid.Row="1" Name="EnterCaptchaButton" Visibility="Collapsed" Click="EnterCaptchaButton_Click"></Button>
         </StackPanel>
+        
     </Grid>
 </Page>

@@ -14,6 +14,18 @@ namespace OrganisationConferention
     
     public partial class Users
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Users()
+        {
+            this.ShortInformation = new HashSet<ShortInformation>();
+            this.ShortInformation1 = new HashSet<ShortInformation>();
+            this.ShortInformation2 = new HashSet<ShortInformation>();
+            this.ShortInformation3 = new HashSet<ShortInformation>();
+            this.ShortInformation4 = new HashSet<ShortInformation>();
+            this.ShortInformation5 = new HashSet<ShortInformation>();
+            this.ShortInformation6 = new HashSet<ShortInformation>();
+        }
+    
         public int ID_Users { get; set; }
         public string FIO { get; set; }
         public int Gender { get; set; }
@@ -32,5 +44,19 @@ namespace OrganisationConferention
         public virtual Events Events1 { get; set; }
         public virtual Gendre Gendre { get; set; }
         public virtual Role Role1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ShortInformation> ShortInformation { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ShortInformation> ShortInformation1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ShortInformation> ShortInformation2 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ShortInformation> ShortInformation3 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ShortInformation> ShortInformation4 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ShortInformation> ShortInformation5 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ShortInformation> ShortInformation6 { get; set; }
     }
 }

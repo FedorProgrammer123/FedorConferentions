@@ -26,16 +26,11 @@ namespace OrganisationConferention
         }
     
         public virtual DbSet<Activity> Activity { get; set; }
-        public virtual DbSet<Cities> Cities { get; set; }
         public virtual DbSet<City> City { get; set; }
         public virtual DbSet<Countries> Countries { get; set; }
         public virtual DbSet<Direction> Direction { get; set; }
         public virtual DbSet<Events> Events { get; set; }
         public virtual DbSet<Gendre> Gendre { get; set; }
-        public virtual DbSet<Jury> Jury { get; set; }
-        public virtual DbSet<Moderators> Moderators { get; set; }
-        public virtual DbSet<Organizers> Organizers { get; set; }
-        public virtual DbSet<Participants> Participants { get; set; }
         public virtual DbSet<PlanEvent> PlanEvent { get; set; }
         public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<ShortInformation> ShortInformation { get; set; }

@@ -9,14 +9,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Cities">
-      <EntityTypeMapping TypeName="FedorConferentionModel.Cities">
-        <MappingFragment StoreEntitySet="Cities">
-          <ScalarProperty Name="City_ID" ColumnName="City_ID" />
-          <ScalarProperty Name="City" ColumnName="City" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="City">
       <EntityTypeMapping TypeName="FedorConferentionModel.City">
         <MappingFragment StoreEntitySet="City">
@@ -60,69 +52,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Jury">
-      <EntityTypeMapping TypeName="FedorConferentionModel.Jury">
-        <MappingFragment StoreEntitySet="Jury">
-          <ScalarProperty Name="ID_Jury" ColumnName="ID_Jury" />
-          <ScalarProperty Name="FIO" ColumnName="FIO" />
-          <ScalarProperty Name="Gender" ColumnName="Gender" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="DateBirthday" ColumnName="DateBirthday" />
-          <ScalarProperty Name="Country" ColumnName="Country" />
-          <ScalarProperty Name="Phone" ColumnName="Phone" />
-          <ScalarProperty Name="Direction" ColumnName="Direction" />
-          <ScalarProperty Name="Password" ColumnName="Password" />
-          <ScalarProperty Name="Photo" ColumnName="Photo" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Moderators">
-      <EntityTypeMapping TypeName="FedorConferentionModel.Moderators">
-        <MappingFragment StoreEntitySet="Moderators">
-          <ScalarProperty Name="Moderator_ID" ColumnName="Moderator_ID" />
-          <ScalarProperty Name="FIO" ColumnName="FIO" />
-          <ScalarProperty Name="Gender" ColumnName="Gender" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="DateBirthday" ColumnName="DateBirthday" />
-          <ScalarProperty Name="Country" ColumnName="Country" />
-          <ScalarProperty Name="Phone" ColumnName="Phone" />
-          <ScalarProperty Name="Direction" ColumnName="Direction" />
-          <ScalarProperty Name="Events" ColumnName="Events" />
-          <ScalarProperty Name="Password" ColumnName="Password" />
-          <ScalarProperty Name="Photo" ColumnName="Photo" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Organizers">
-      <EntityTypeMapping TypeName="FedorConferentionModel.Organizers">
-        <MappingFragment StoreEntitySet="Organizers">
-          <ScalarProperty Name="ID_Organizator" ColumnName="ID_Organizator" />
-          <ScalarProperty Name="FIO" ColumnName="FIO" />
-          <ScalarProperty Name="Gendre" ColumnName="Gendre" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="DateBirthday" ColumnName="DateBirthday" />
-          <ScalarProperty Name="Country" ColumnName="Country" />
-          <ScalarProperty Name="Phone" ColumnName="Phone" />
-          <ScalarProperty Name="Password" ColumnName="Password" />
-          <ScalarProperty Name="Photo" ColumnName="Photo" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Participants">
-      <EntityTypeMapping TypeName="FedorConferentionModel.Participants">
-        <MappingFragment StoreEntitySet="Participants">
-          <ScalarProperty Name="ID_Participant" ColumnName="ID_Participant" />
-          <ScalarProperty Name="FIO" ColumnName="FIO" />
-          <ScalarProperty Name="Gender" ColumnName="Gender" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="DateBirthday" ColumnName="DateBirthday" />
-          <ScalarProperty Name="Country" ColumnName="Country" />
-          <ScalarProperty Name="Phone" ColumnName="Phone" />
-          <ScalarProperty Name="Password" ColumnName="Password" />
-          <ScalarProperty Name="Photo" ColumnName="Photo" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="PlanEvent">
       <EntityTypeMapping TypeName="FedorConferentionModel.PlanEvent">
         <MappingFragment StoreEntitySet="PlanEvent">
@@ -131,6 +60,8 @@
           <ScalarProperty Name="Date" ColumnName="Date" />
           <ScalarProperty Name="Days" ColumnName="Days" />
           <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="ImagePhoto" ColumnName="ImagePhoto" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
