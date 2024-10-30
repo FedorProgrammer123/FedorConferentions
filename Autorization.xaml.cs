@@ -30,7 +30,7 @@ namespace OrganisationConferention
             
         }
 
-        private async void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
              
              var Name = EnterNameBox.Text;
@@ -54,6 +54,7 @@ namespace OrganisationConferention
                             break;
                         case 3:
                             MessageBox.Show("Добро пожаловать, организатор");
+                            Manager.MainFrame.Navigate(new OrganisatorCabinet(user));
                             break;
                         case 4:
                             MessageBox.Show("Добро пожаловать, участник");

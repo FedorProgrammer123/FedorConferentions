@@ -79,3 +79,7 @@ E:\Лисавина\Организация_конференций_2023\Organisat
 E:\Лисавина\Организация_конференций_2023\OrganisationConferention\obj\Debug\Organisa.F16AB863.Up2Date
 E:\Лисавина\Организация_конференций_2023\OrganisationConferention\obj\Debug\OrganisationConferention.exe
 E:\Лисавина\Организация_конференций_2023\OrganisationConferention\obj\Debug\OrganisationConferention.pdb
+E:\Лисавина\Организация_конференций_2023\OrganisationConferention\obj\Debug\OrganisatorCabinet.g.cs
+E:\Лисавина\Организация_конференций_2023\OrganisationConferention\obj\Debug\OrganisatorCabinet.baml
+D:\Лисавина\Организация_конференций_2023\OrganisationConferention\obj\Debug\OrganisatorCabinet.g.cs
+D:\Лисавина\Организация_конференций_2023\OrganisationConferention\obj\Debug\OrganisatorCabinet.baml

@@ -108,8 +108,9 @@
     <Property Name="Direction" Type="int" />
     <Property Name="Events" Type="int" />
     <Property Name="Password" Type="nvarchar" MaxLength="250" Nullable="false" />
-    <Property Name="Photo" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Photo" Type="nvarchar" MaxLength="250" />
     <Property Name="Role" Type="int" Nullable="false" />
+    <Property Name="UserPhoto" Type="image" />
   </EntityType>
   <Association Name="FK_PlanEvent_City">
     <End Role="City" Type="Self.City" Multiplicity="1" />

@@ -126,8 +126,9 @@
     <Property Name="Direction" Type="Int32" />
     <Property Name="Events" Type="Int32" />
     <Property Name="Password" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Photo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Photo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="Role" Type="Int32" Nullable="false" />
+    <Property Name="UserPhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
     <NavigationProperty Name="Countries" Relationship="Self.FK_Users_Countries" FromRole="Users" ToRole="Countries" />
     <NavigationProperty Name="Direction1" Relationship="Self.FK_Users_Direction" FromRole="Users" ToRole="Direction" />
     <NavigationProperty Name="Events1" Relationship="Self.FK_Users_Events" FromRole="Users" ToRole="Events" />

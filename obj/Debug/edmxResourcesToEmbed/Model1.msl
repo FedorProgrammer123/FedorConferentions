@@ -120,6 +120,7 @@
           <ScalarProperty Name="Password" ColumnName="Password" />
           <ScalarProperty Name="Photo" ColumnName="Photo" />
           <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="UserPhoto" ColumnName="UserPhoto" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

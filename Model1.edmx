@@ -113,8 +113,9 @@
           <Property Name="Direction" Type="int" />
           <Property Name="Events" Type="int" />
           <Property Name="Password" Type="nvarchar" MaxLength="250" Nullable="false" />
-          <Property Name="Photo" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="250" />
           <Property Name="Role" Type="int" Nullable="false" />
+          <Property Name="UserPhoto" Type="image" />
         </EntityType>
         <Association Name="FK_PlanEvent_City">
           <End Role="City" Type="Self.City" Multiplicity="1" />
@@ -500,8 +501,9 @@
           <Property Name="Direction" Type="Int32" />
           <Property Name="Events" Type="Int32" />
           <Property Name="Password" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Photo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Photo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="Role" Type="Int32" Nullable="false" />
+          <Property Name="UserPhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="Countries" Relationship="Self.FK_Users_Countries" FromRole="Users" ToRole="Countries" />
           <NavigationProperty Name="Direction1" Relationship="Self.FK_Users_Direction" FromRole="Users" ToRole="Direction" />
           <NavigationProperty Name="Events1" Relationship="Self.FK_Users_Events" FromRole="Users" ToRole="Events" />
@@ -893,6 +895,7 @@
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="Photo" ColumnName="Photo" />
                 <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="UserPhoto" ColumnName="UserPhoto" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

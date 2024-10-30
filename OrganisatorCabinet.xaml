@@ -1,0 +1,45 @@
+﻿<Page x:Class="OrganisationConferention.OrganisatorCabinet"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:OrganisationConferention"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="OrganisatorCabinet">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <TextBlock FontFamily="Comic Sans MS" Text="Окно организатора" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"></TextBlock>
+        </Grid>
+        <StackPanel HorizontalAlignment="Left" Grid.Row="2">
+            <Image Grid.Row="1" Name="UserImage" Stretch="UniformToFill" Width="200" Height="200" Margin="5">
+                <Image.Source>
+                    <Binding Path="UserPhoto">
+                        <Binding.TargetNullValue>
+                            <BitmapImage UriSource="Resources/Logo.png"></BitmapImage>
+                        </Binding.TargetNullValue>
+                    </Binding>
+                </Image.Source>
+            </Image>
+            <Button Content="Мой профиль" FontFamily="Comic Sans MS" Width="200" Padding="10"></Button>
+            
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Right" Grid.Row="2">
+            <Button Content="Назад" Margin="0 150 0 0"  Width="200" Padding="10" Click="Button_Click"></Button>
+            <Button Content="Далее" Width="200" Padding="10"></Button>
+        </StackPanel>
+        <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Grid.Row="1" Name="TimeDisplay" FontFamily="Comic Sans MS"></TextBlock>
+            <TextBlock Grid.Row="1" Name="FIOLabel" FontFamily="Comic Sans MS"></TextBlock>
+            <Button Content="Мероприятия" Grid.Row="1" FontFamily="Comic Sans MS" Width="200" Padding="10"></Button>
+            <Button Content="Участники" Grid.Row="1" FontFamily="Comic Sans MS" Width="200" Margin="0 10 0 0" Padding="10"></Button>
+            <Button Content="Жюри" Grid.Row="1" FontFamily="Comic Sans MS" Width="200" Margin="0 10 0 0" Padding="10"></Button>
+        </StackPanel>
+        
+    </Grid>
+</Page>

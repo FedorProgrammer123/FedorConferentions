@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -25,6 +26,26 @@ namespace OrganisationConferention
                     if (File.Exists(path))
                     {
                         item.ImagePhoto = File.ReadAllBytes(path);
+                    }
+                }
+                Context.GetContext().SaveChanges();
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+        public static void GetImageUser()
+        {
+            try
+            {
+                var list = Context.GetContext().Users.ToList();
+                foreach (var item in list)
+                {
+                    string path = Directory.GetCurrentDirectory() + @"\userimage\" + item.Photo;
+                    if (File.Exists(path))
+                    {
+                        item.UserPhoto = File.ReadAllBytes(path);
                     }
                 }
                 Context.GetContext().SaveChanges();

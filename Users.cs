@@ -38,6 +38,7 @@ namespace OrganisationConferention
         public string Password { get; set; }
         public string Photo { get; set; }
         public int Role { get; set; }
+        public byte[] UserPhoto { get; set; }
     
         public virtual Countries Countries { get; set; }
         public virtual Direction Direction1 { get; set; }
