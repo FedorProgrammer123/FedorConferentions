@@ -12,16 +12,16 @@ namespace OrganisationConferention
     using System;
     using System.Collections.Generic;
     
-    public partial class Direction
+    public partial class UserGender
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Direction()
+        public UserGender()
         {
             this.Users = new HashSet<Users>();
         }
     
-        public int ID_Direction { get; set; }
-        public string Direction1 { get; set; }
+        public int ID_Gendre { get; set; }
+        public string Gendre { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Users> Users { get; set; }

@@ -30,8 +30,8 @@ namespace OrganisationConferention
         public string FIO { get; set; }
         public int Gender { get; set; }
         public string Email { get; set; }
-        public System.DateTime DateBirthday { get; set; }
-        public int Country { get; set; }
+        public Nullable<System.DateTime> DateBirthday { get; set; }
+        public Nullable<int> Country { get; set; }
         public string Phone { get; set; }
         public Nullable<int> Direction { get; set; }
         public Nullable<int> Events { get; set; }
@@ -41,10 +41,6 @@ namespace OrganisationConferention
         public byte[] UserPhoto { get; set; }
     
         public virtual Countries Countries { get; set; }
-        public virtual Direction Direction1 { get; set; }
-        public virtual Events Events1 { get; set; }
-        public virtual Gendre Gendre { get; set; }
-        public virtual Role Role1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ShortInformation> ShortInformation { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -59,5 +55,9 @@ namespace OrganisationConferention
         public virtual ICollection<ShortInformation> ShortInformation5 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ShortInformation> ShortInformation6 { get; set; }
+        public virtual UserDirection UserDirection { get; set; }
+        public virtual UserEvents UserEvents { get; set; }
+        public virtual UserGender UserGender { get; set; }
+        public virtual UserRole UserRole { get; set; }
     }
 }

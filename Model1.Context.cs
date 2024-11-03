@@ -28,13 +28,13 @@ namespace OrganisationConferention
         public virtual DbSet<Activity> Activity { get; set; }
         public virtual DbSet<City> City { get; set; }
         public virtual DbSet<Countries> Countries { get; set; }
-        public virtual DbSet<Direction> Direction { get; set; }
-        public virtual DbSet<Events> Events { get; set; }
-        public virtual DbSet<Gendre> Gendre { get; set; }
         public virtual DbSet<PlanEvent> PlanEvent { get; set; }
-        public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<ShortInformation> ShortInformation { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<UserDirection> UserDirection { get; set; }
+        public virtual DbSet<UserEvents> UserEvents { get; set; }
+        public virtual DbSet<UserGender> UserGender { get; set; }
+        public virtual DbSet<UserRole> UserRole { get; set; }
         public virtual DbSet<Users> Users { get; set; }
     }
 }

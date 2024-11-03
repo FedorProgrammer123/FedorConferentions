@@ -12,16 +12,16 @@ namespace OrganisationConferention
     using System;
     using System.Collections.Generic;
     
-    public partial class Gendre
+    public partial class UserRole
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Gendre()
+        public UserRole()
         {
             this.Users = new HashSet<Users>();
         }
     
-        public int ID_Gendre { get; set; }
-        public string Gendre1 { get; set; }
+        public int ID_Role { get; set; }
+        public string Roles { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Users> Users { get; set; }

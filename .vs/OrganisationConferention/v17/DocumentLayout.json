@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "E:\\\u041B\u0438\u0441\u0430\u0432\u0438\u043D\u0430\\\u041E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044F_\u043A\u043E\u043D\u0444\u0435\u0440\u0435\u043D\u0446\u0438\u0439_2023\\OrganisationConferention\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CD8C5020-7366-4948-B599-F507993FAFA7}|OrganisationConferention.csproj|e:\\\u043B\u0438\u0441\u0430\u0432\u0438\u043D\u0430\\\u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044F_\u043A\u043E\u043D\u0444\u0435\u0440\u0435\u043D\u0446\u0438\u0439_2023\\organisationconferention\\organisatorcabinet.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD8C5020-7366-4948-B599-F507993FAFA7}|OrganisationConferention.csproj|solutionrelative:organisatorcabinet.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CD8C5020-7366-4948-B599-F507993FAFA7}|OrganisationConferention.csproj|e:\\\u043B\u0438\u0441\u0430\u0432\u0438\u043D\u0430\\\u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044F_\u043A\u043E\u043D\u0444\u0435\u0440\u0435\u043D\u0446\u0438\u0439_2023\\organisationconferention\\registrationjurimoderators.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD8C5020-7366-4948-B599-F507993FAFA7}|OrganisationConferention.csproj|solutionrelative:registrationjurimoderators.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD8C5020-7366-4948-B599-F507993FAFA7}|OrganisationConferention.csproj|e:\\\u043B\u0438\u0441\u0430\u0432\u0438\u043D\u0430\\\u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044F_\u043A\u043E\u043D\u0444\u0435\u0440\u0435\u043D\u0446\u0438\u0439_2023\\organisationconferention\\organisatorcabinet.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{CD8C5020-7366-4948-B599-F507993FAFA7}|OrganisationConferention.csproj|e:\\\u043B\u0438\u0441\u0430\u0432\u0438\u043D\u0430\\\u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044F_\u043A\u043E\u043D\u0444\u0435\u0440\u0435\u043D\u0446\u0438\u0439_2023\\organisationconferention\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD8C5020-7366-4948-B599-F507993FAFA7}|OrganisationConferention.csproj|solutionrelative:context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD8C5020-7366-4948-B599-F507993FAFA7}|OrganisationConferention.csproj|E:\\\u041B\u0438\u0441\u0430\u0432\u0438\u043D\u0430\\\u041E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044F_\u043A\u043E\u043D\u0444\u0435\u0440\u0435\u043D\u0446\u0438\u0439_2023\\OrganisationConferention\\registrationjurimoderators.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CD8C5020-7366-4948-B599-F507993FAFA7}|OrganisationConferention.csproj|solutionrelative:registrationjurimoderators.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD8C5020-7366-4948-B599-F507993FAFA7}|OrganisationConferention.csproj|E:\\\u041B\u0438\u0441\u0430\u0432\u0438\u043D\u0430\\\u041E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044F_\u043A\u043E\u043D\u0444\u0435\u0440\u0435\u043D\u0446\u0438\u0439_2023\\OrganisationConferention\\organisatorcabinet.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{CD8C5020-7366-4948-B599-F507993FAFA7}|OrganisationConferention.csproj|solutionrelative:organisatorcabinet.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD8C5020-7366-4948-B599-F507993FAFA7}|OrganisationConferention.csproj|E:\\\u041B\u0438\u0441\u0430\u0432\u0438\u043D\u0430\\\u041E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044F_\u043A\u043E\u043D\u0444\u0435\u0440\u0435\u043D\u0446\u0438\u0439_2023\\OrganisationConferention\\primarypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{CD8C5020-7366-4948-B599-F507993FAFA7}|OrganisationConferention.csproj|solutionrelative:primarypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CD8C5020-7366-4948-B599-F507993FAFA7}|OrganisationConferention.csproj|E:\\\u041B\u0438\u0441\u0430\u0432\u0438\u043D\u0430\\\u041E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044F_\u043A\u043E\u043D\u0444\u0435\u0440\u0435\u043D\u0446\u0438\u0439_2023\\OrganisationConferention\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -26,48 +30,60 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OrganisatorCabinet.xaml.cs",
-              "DocumentMoniker": "E:\\\u041B\u0438\u0441\u0430\u0432\u0438\u043D\u0430\\\u041E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044F_\u043A\u043E\u043D\u0444\u0435\u0440\u0435\u043D\u0446\u0438\u0439_2023\\OrganisationConferention\\OrganisatorCabinet.xaml.cs",
-              "RelativeDocumentMoniker": "OrganisatorCabinet.xaml.cs",
-              "ToolTip": "E:\\\u041B\u0438\u0441\u0430\u0432\u0438\u043D\u0430\\\u041E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044F_\u043A\u043E\u043D\u0444\u0435\u0440\u0435\u043D\u0446\u0438\u0439_2023\\OrganisationConferention\\OrganisatorCabinet.xaml.cs",
-              "RelativeToolTip": "OrganisatorCabinet.xaml.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAADwvzYAAACdAAAA",
+              "DocumentIndex": 1,
+              "Title": "Context.cs",
+              "DocumentMoniker": "E:\\\u041B\u0438\u0441\u0430\u0432\u0438\u043D\u0430\\\u041E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044F_\u043A\u043E\u043D\u0444\u0435\u0440\u0435\u043D\u0446\u0438\u0439_2023\\OrganisationConferention\\Context.cs",
+              "RelativeDocumentMoniker": "Context.cs",
+              "ToolTip": "E:\\\u041B\u0438\u0441\u0430\u0432\u0438\u043D\u0430\\\u041E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044F_\u043A\u043E\u043D\u0444\u0435\u0440\u0435\u043D\u0446\u0438\u0439_2023\\OrganisationConferention\\Context.cs",
+              "RelativeToolTip": "Context.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvw8AAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T22:47:58.064Z",
+              "WhenOpened": "2024-11-03T10:09:51.078Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "RegistrationJuriModerators.xaml.cs",
+              "DocumentMoniker": "E:\\\u041B\u0438\u0441\u0430\u0432\u0438\u043D\u0430\\\u041E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044F_\u043A\u043E\u043D\u0444\u0435\u0440\u0435\u043D\u0446\u0438\u0439_2023\\OrganisationConferention\\RegistrationJuriModerators.xaml.cs",
+              "RelativeDocumentMoniker": "RegistrationJuriModerators.xaml.cs",
+              "ToolTip": "E:\\\u041B\u0438\u0441\u0430\u0432\u0438\u043D\u0430\\\u041E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044F_\u043A\u043E\u043D\u0444\u0435\u0440\u0435\u043D\u0446\u0438\u0439_2023\\OrganisationConferention\\RegistrationJuriModerators.xaml.cs",
+              "RelativeToolTip": "RegistrationJuriModerators.xaml.cs",
+              "ViewState": "AQIAAKcAAAAAAAAAAAAQwL8AAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T09:56:14.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RegistrationJuriModerators.xaml",
+              "DocumentMoniker": "E:\\\u041B\u0438\u0441\u0430\u0432\u0438\u043D\u0430\\\u041E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044F_\u043A\u043E\u043D\u0444\u0435\u0440\u0435\u043D\u0446\u0438\u0439_2023\\OrganisationConferention\\RegistrationJuriModerators.xaml",
+              "RelativeDocumentMoniker": "RegistrationJuriModerators.xaml",
+              "ToolTip": "E:\\\u041B\u0438\u0441\u0430\u0432\u0438\u043D\u0430\\\u041E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044F_\u043A\u043E\u043D\u0444\u0435\u0440\u0435\u043D\u0446\u0438\u0439_2023\\OrganisationConferention\\RegistrationJuriModerators.xaml",
+              "RelativeToolTip": "RegistrationJuriModerators.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-02T08:13:25.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "OrganisatorCabinet.xaml",
               "DocumentMoniker": "E:\\\u041B\u0438\u0441\u0430\u0432\u0438\u043D\u0430\\\u041E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044F_\u043A\u043E\u043D\u0444\u0435\u0440\u0435\u043D\u0446\u0438\u0439_2023\\OrganisationConferention\\OrganisatorCabinet.xaml",
               "RelativeDocumentMoniker": "OrganisatorCabinet.xaml",
               "ToolTip": "E:\\\u041B\u0438\u0441\u0430\u0432\u0438\u043D\u0430\\\u041E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044F_\u043A\u043E\u043D\u0444\u0435\u0440\u0435\u043D\u0446\u0438\u0439_2023\\OrganisationConferention\\OrganisatorCabinet.xaml",
               "RelativeToolTip": "OrganisatorCabinet.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-28T22:56:35.144Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-28T22:56:35.144Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PrimaryPage.xaml",
-              "DocumentMoniker": "E:\\\u041B\u0438\u0441\u0430\u0432\u0438\u043D\u0430\\\u041E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044F_\u043A\u043E\u043D\u0444\u0435\u0440\u0435\u043D\u0446\u0438\u0439_2023\\OrganisationConferention\\PrimaryPage.xaml",
-              "RelativeDocumentMoniker": "PrimaryPage.xaml",
-              "ToolTip": "E:\\\u041B\u0438\u0441\u0430\u0432\u0438\u043D\u0430\\\u041E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044F_\u043A\u043E\u043D\u0444\u0435\u0440\u0435\u043D\u0446\u0438\u0439_2023\\OrganisationConferention\\PrimaryPage.xaml",
-              "RelativeToolTip": "PrimaryPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-15T19:44:20.986Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "E:\\\u041B\u0438\u0441\u0430\u0432\u0438\u043D\u0430\\\u041E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044F_\u043A\u043E\u043D\u0444\u0435\u0440\u0435\u043D\u0446\u0438\u0439_2023\\OrganisationConferention\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",

@@ -29,27 +29,6 @@
           <Property Name="Code" Type="nvarchar" MaxLength="250" Nullable="false" />
           <Property Name="Code2" Type="int" Nullable="false" />
         </EntityType>
-        <EntityType Name="Direction">
-          <Key>
-            <PropertyRef Name="ID_Direction" />
-          </Key>
-          <Property Name="ID_Direction" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Direction" Type="nvarchar" MaxLength="250" />
-        </EntityType>
-        <EntityType Name="Events">
-          <Key>
-            <PropertyRef Name="ID_Events" />
-          </Key>
-          <Property Name="ID_Events" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Events" Type="nvarchar" MaxLength="250" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Gendre">
-          <Key>
-            <PropertyRef Name="ID_Gendre" />
-          </Key>
-          <Property Name="ID_Gendre" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Gendre" Type="nvarchar" MaxLength="250" Nullable="false" />
-        </EntityType>
         <EntityType Name="PlanEvent">
           <Key>
             <PropertyRef Name="ID_Event" />
@@ -61,13 +40,6 @@
           <Property Name="City" Type="int" Nullable="false" />
           <Property Name="ImageName" Type="nvarchar" MaxLength="250" />
           <Property Name="ImagePhoto" Type="image" />
-        </EntityType>
-        <EntityType Name="Role">
-          <Key>
-            <PropertyRef Name="ID_Role" />
-          </Key>
-          <Property Name="ID_Role" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Role" Type="nvarchar" MaxLength="250" Nullable="false" />
         </EntityType>
         <EntityType Name="ShortInformation">
           <Key>
@@ -99,6 +71,34 @@
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
+        <EntityType Name="UserDirection">
+          <Key>
+            <PropertyRef Name="ID_Direction" />
+          </Key>
+          <Property Name="ID_Direction" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Direction" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="UserEvents">
+          <Key>
+            <PropertyRef Name="ID_Events" />
+          </Key>
+          <Property Name="ID_Events" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Events" Type="nvarchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserGender">
+          <Key>
+            <PropertyRef Name="ID_Gendre" />
+          </Key>
+          <Property Name="ID_Gendre" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Gendre" Type="nvarchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="ID_Role" />
+          </Key>
+          <Property Name="ID_Role" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Roles" Type="nvarchar" MaxLength="250" Nullable="false" />
+        </EntityType>
         <EntityType Name="Users">
           <Key>
             <PropertyRef Name="ID_Users" />
@@ -107,8 +107,8 @@
           <Property Name="FIO" Type="nvarchar" MaxLength="250" Nullable="false" />
           <Property Name="Gender" Type="int" Nullable="false" />
           <Property Name="Email" Type="nvarchar" MaxLength="250" Nullable="false" />
-          <Property Name="DateBirthday" Type="date" Nullable="false" />
-          <Property Name="Country" Type="int" Nullable="false" />
+          <Property Name="DateBirthday" Type="date" />
+          <Property Name="Country" Type="int" />
           <Property Name="Phone" Type="nvarchar" MaxLength="250" Nullable="false" />
           <Property Name="Direction" Type="int" />
           <Property Name="Events" Type="int" />
@@ -238,7 +238,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Users_Countries">
-          <End Role="Countries" Type="Self.Countries" Multiplicity="1" />
+          <End Role="Countries" Type="Self.Countries" Multiplicity="0..1" />
           <End Role="Users" Type="Self.Users" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Countries">
@@ -250,10 +250,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Users_Direction">
-          <End Role="Direction" Type="Self.Direction" Multiplicity="0..1" />
+          <End Role="UserDirection" Type="Self.UserDirection" Multiplicity="0..1" />
           <End Role="Users" Type="Self.Users" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Direction">
+            <Principal Role="UserDirection">
               <PropertyRef Name="ID_Direction" />
             </Principal>
             <Dependent Role="Users">
@@ -262,10 +262,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Users_Events">
-          <End Role="Events" Type="Self.Events" Multiplicity="0..1" />
+          <End Role="UserEvents" Type="Self.UserEvents" Multiplicity="0..1" />
           <End Role="Users" Type="Self.Users" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Events">
+            <Principal Role="UserEvents">
               <PropertyRef Name="ID_Events" />
             </Principal>
             <Dependent Role="Users">
@@ -274,10 +274,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Users_Gendre">
-          <End Role="Gendre" Type="Self.Gendre" Multiplicity="1" />
+          <End Role="UserGender" Type="Self.UserGender" Multiplicity="1" />
           <End Role="Users" Type="Self.Users" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Gendre">
+            <Principal Role="UserGender">
               <PropertyRef Name="ID_Gendre" />
             </Principal>
             <Dependent Role="Users">
@@ -286,10 +286,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Users_Role">
-          <End Role="Role" Type="Self.Role" Multiplicity="1" />
+          <End Role="UserRole" Type="Self.UserRole" Multiplicity="1" />
           <End Role="Users" Type="Self.Users" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Role">
+            <Principal Role="UserRole">
               <PropertyRef Name="ID_Role" />
             </Principal>
             <Dependent Role="Users">
@@ -301,13 +301,13 @@
           <EntitySet Name="Activity" EntityType="Self.Activity" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Countries" EntityType="Self.Countries" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Direction" EntityType="Self.Direction" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Events" EntityType="Self.Events" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Gendre" EntityType="Self.Gendre" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PlanEvent" EntityType="Self.PlanEvent" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ShortInformation" EntityType="Self.ShortInformation" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserDirection" EntityType="Self.UserDirection" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserEvents" EntityType="Self.UserEvents" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserGender" EntityType="Self.UserGender" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserRole" EntityType="Self.UserRole" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_PlanEvent_City" Association="Self.FK_PlanEvent_City">
             <End Role="City" EntitySet="City" />
@@ -354,19 +354,19 @@
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
           <AssociationSet Name="FK_Users_Direction" Association="Self.FK_Users_Direction">
-            <End Role="Direction" EntitySet="Direction" />
+            <End Role="UserDirection" EntitySet="UserDirection" />
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
           <AssociationSet Name="FK_Users_Events" Association="Self.FK_Users_Events">
-            <End Role="Events" EntitySet="Events" />
+            <End Role="UserEvents" EntitySet="UserEvents" />
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
           <AssociationSet Name="FK_Users_Gendre" Association="Self.FK_Users_Gendre">
-            <End Role="Gendre" EntitySet="Gendre" />
+            <End Role="UserGender" EntitySet="UserGender" />
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
           <AssociationSet Name="FK_Users_Role" Association="Self.FK_Users_Role">
-            <End Role="Role" EntitySet="Role" />
+            <End Role="UserRole" EntitySet="UserRole" />
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
         </EntityContainer>
@@ -402,30 +402,6 @@
           <Property Name="Code2" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Users" Relationship="Self.FK_Users_Countries" FromRole="Countries" ToRole="Users" />
         </EntityType>
-        <EntityType Name="Direction">
-          <Key>
-            <PropertyRef Name="ID_Direction" />
-          </Key>
-          <Property Name="ID_Direction" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Direction1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Users" Relationship="Self.FK_Users_Direction" FromRole="Direction" ToRole="Users" />
-        </EntityType>
-        <EntityType Name="Events">
-          <Key>
-            <PropertyRef Name="ID_Events" />
-          </Key>
-          <Property Name="ID_Events" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Events1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Users" Relationship="Self.FK_Users_Events" FromRole="Events" ToRole="Users" />
-        </EntityType>
-        <EntityType Name="Gendre">
-          <Key>
-            <PropertyRef Name="ID_Gendre" />
-          </Key>
-          <Property Name="ID_Gendre" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Gendre1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Users" Relationship="Self.FK_Users_Gendre" FromRole="Gendre" ToRole="Users" />
-        </EntityType>
         <EntityType Name="PlanEvent">
           <Key>
             <PropertyRef Name="ID_Event" />
@@ -439,14 +415,6 @@
           <Property Name="ImagePhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="City1" Relationship="Self.FK_PlanEvent_City" FromRole="PlanEvent" ToRole="City" />
           <NavigationProperty Name="ShortInformation" Relationship="Self.FK_ShortInformation_PlanEvent" FromRole="PlanEvent" ToRole="ShortInformation" />
-        </EntityType>
-        <EntityType Name="Role">
-          <Key>
-            <PropertyRef Name="ID_Role" />
-          </Key>
-          <Property Name="ID_Role" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Role1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Users" Relationship="Self.FK_Users_Role" FromRole="Role" ToRole="Users" />
         </EntityType>
         <EntityType Name="ShortInformation">
           <Key>
@@ -487,6 +455,38 @@
           <Property Name="version" Type="Int32" />
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
+        <EntityType Name="UserDirection">
+          <Key>
+            <PropertyRef Name="ID_Direction" />
+          </Key>
+          <Property Name="ID_Direction" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Direction" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_Users_Direction" FromRole="UserDirection" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="UserEvents">
+          <Key>
+            <PropertyRef Name="ID_Events" />
+          </Key>
+          <Property Name="ID_Events" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Events" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_Users_Events" FromRole="UserEvents" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="UserGender">
+          <Key>
+            <PropertyRef Name="ID_Gendre" />
+          </Key>
+          <Property Name="ID_Gendre" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Gendre" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_Users_Gendre" FromRole="UserGender" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="ID_Role" />
+          </Key>
+          <Property Name="ID_Role" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Roles" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_Users_Role" FromRole="UserRole" ToRole="Users" />
+        </EntityType>
         <EntityType Name="Users">
           <Key>
             <PropertyRef Name="ID_Users" />
@@ -495,8 +495,8 @@
           <Property Name="FIO" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Gender" Type="Int32" Nullable="false" />
           <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="DateBirthday" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="Country" Type="Int32" Nullable="false" />
+          <Property Name="DateBirthday" Type="DateTime" Precision="0" />
+          <Property Name="Country" Type="Int32" />
           <Property Name="Phone" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Direction" Type="Int32" />
           <Property Name="Events" Type="Int32" />
@@ -505,10 +505,6 @@
           <Property Name="Role" Type="Int32" Nullable="false" />
           <Property Name="UserPhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="Countries" Relationship="Self.FK_Users_Countries" FromRole="Users" ToRole="Countries" />
-          <NavigationProperty Name="Direction1" Relationship="Self.FK_Users_Direction" FromRole="Users" ToRole="Direction" />
-          <NavigationProperty Name="Events1" Relationship="Self.FK_Users_Events" FromRole="Users" ToRole="Events" />
-          <NavigationProperty Name="Gendre" Relationship="Self.FK_Users_Gendre" FromRole="Users" ToRole="Gendre" />
-          <NavigationProperty Name="Role1" Relationship="Self.FK_Users_Role" FromRole="Users" ToRole="Role" />
           <NavigationProperty Name="ShortInformation" Relationship="Self.FK_ShortInformation_Jury1" FromRole="Users" ToRole="ShortInformation" />
           <NavigationProperty Name="ShortInformation1" Relationship="Self.FK_ShortInformation_Jury2" FromRole="Users" ToRole="ShortInformation" />
           <NavigationProperty Name="ShortInformation2" Relationship="Self.FK_ShortInformation_Jury3" FromRole="Users" ToRole="ShortInformation" />
@@ -516,6 +512,10 @@
           <NavigationProperty Name="ShortInformation4" Relationship="Self.FK_ShortInformation_Jury5" FromRole="Users" ToRole="ShortInformation" />
           <NavigationProperty Name="ShortInformation5" Relationship="Self.FK_ShortInformation_Moderator" FromRole="Users" ToRole="ShortInformation" />
           <NavigationProperty Name="ShortInformation6" Relationship="Self.FK_ShortInformation_Winner" FromRole="Users" ToRole="ShortInformation" />
+          <NavigationProperty Name="UserDirection" Relationship="Self.FK_Users_Direction" FromRole="Users" ToRole="UserDirection" />
+          <NavigationProperty Name="UserEvents" Relationship="Self.FK_Users_Events" FromRole="Users" ToRole="UserEvents" />
+          <NavigationProperty Name="UserGender" Relationship="Self.FK_Users_Gendre" FromRole="Users" ToRole="UserGender" />
+          <NavigationProperty Name="UserRole" Relationship="Self.FK_Users_Role" FromRole="Users" ToRole="UserRole" />
         </EntityType>
         <Association Name="FK_ShortInformation_Activity">
           <End Role="Activity" Type="Self.Activity" Multiplicity="1" />
@@ -542,7 +542,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Users_Countries">
-          <End Role="Countries" Type="Self.Countries" Multiplicity="1" />
+          <End Role="Countries" Type="Self.Countries" Multiplicity="0..1" />
           <End Role="Users" Type="Self.Users" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Countries">
@@ -550,42 +550,6 @@
             </Principal>
             <Dependent Role="Users">
               <PropertyRef Name="Country" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Users_Direction">
-          <End Role="Direction" Type="Self.Direction" Multiplicity="0..1" />
-          <End Role="Users" Type="Self.Users" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Direction">
-              <PropertyRef Name="ID_Direction" />
-            </Principal>
-            <Dependent Role="Users">
-              <PropertyRef Name="Direction" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Users_Events">
-          <End Role="Events" Type="Self.Events" Multiplicity="0..1" />
-          <End Role="Users" Type="Self.Users" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Events">
-              <PropertyRef Name="ID_Events" />
-            </Principal>
-            <Dependent Role="Users">
-              <PropertyRef Name="Events" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Users_Gendre">
-          <End Role="Gendre" Type="Self.Gendre" Multiplicity="1" />
-          <End Role="Users" Type="Self.Users" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Gendre">
-              <PropertyRef Name="ID_Gendre" />
-            </Principal>
-            <Dependent Role="Users">
-              <PropertyRef Name="Gender" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -598,18 +562,6 @@
             </Principal>
             <Dependent Role="ShortInformation">
               <PropertyRef Name="EventsName" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Users_Role">
-          <End Role="Role" Type="Self.Role" Multiplicity="1" />
-          <End Role="Users" Type="Self.Users" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Role">
-              <PropertyRef Name="ID_Role" />
-            </Principal>
-            <Dependent Role="Users">
-              <PropertyRef Name="Role" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -697,17 +649,65 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Users_Direction">
+          <End Role="UserDirection" Type="Self.UserDirection" Multiplicity="0..1" />
+          <End Role="Users" Type="Self.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserDirection">
+              <PropertyRef Name="ID_Direction" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="Direction" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_Events">
+          <End Role="UserEvents" Type="Self.UserEvents" Multiplicity="0..1" />
+          <End Role="Users" Type="Self.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserEvents">
+              <PropertyRef Name="ID_Events" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="Events" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_Gendre">
+          <End Role="UserGender" Type="Self.UserGender" Multiplicity="1" />
+          <End Role="Users" Type="Self.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserGender">
+              <PropertyRef Name="ID_Gendre" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="Gender" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_Role">
+          <End Role="UserRole" Type="Self.UserRole" Multiplicity="1" />
+          <End Role="Users" Type="Self.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserRole">
+              <PropertyRef Name="ID_Role" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="Role" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="FedorConferentionEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Activity" EntityType="Self.Activity" />
           <EntitySet Name="City" EntityType="Self.City" />
           <EntitySet Name="Countries" EntityType="Self.Countries" />
-          <EntitySet Name="Direction" EntityType="Self.Direction" />
-          <EntitySet Name="Events" EntityType="Self.Events" />
-          <EntitySet Name="Gendre" EntityType="Self.Gendre" />
           <EntitySet Name="PlanEvent" EntityType="Self.PlanEvent" />
-          <EntitySet Name="Role" EntityType="Self.Role" />
           <EntitySet Name="ShortInformation" EntityType="Self.ShortInformation" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="UserDirection" EntityType="Self.UserDirection" />
+          <EntitySet Name="UserEvents" EntityType="Self.UserEvents" />
+          <EntitySet Name="UserGender" EntityType="Self.UserGender" />
+          <EntitySet Name="UserRole" EntityType="Self.UserRole" />
           <EntitySet Name="Users" EntityType="Self.Users" />
           <AssociationSet Name="FK_ShortInformation_Activity" Association="Self.FK_ShortInformation_Activity">
             <End Role="Activity" EntitySet="Activity" />
@@ -721,25 +721,9 @@
             <End Role="Countries" EntitySet="Countries" />
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
-          <AssociationSet Name="FK_Users_Direction" Association="Self.FK_Users_Direction">
-            <End Role="Direction" EntitySet="Direction" />
-            <End Role="Users" EntitySet="Users" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Users_Events" Association="Self.FK_Users_Events">
-            <End Role="Events" EntitySet="Events" />
-            <End Role="Users" EntitySet="Users" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Users_Gendre" Association="Self.FK_Users_Gendre">
-            <End Role="Gendre" EntitySet="Gendre" />
-            <End Role="Users" EntitySet="Users" />
-          </AssociationSet>
           <AssociationSet Name="FK_ShortInformation_PlanEvent" Association="Self.FK_ShortInformation_PlanEvent">
             <End Role="PlanEvent" EntitySet="PlanEvent" />
             <End Role="ShortInformation" EntitySet="ShortInformation" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Users_Role" Association="Self.FK_Users_Role">
-            <End Role="Role" EntitySet="Role" />
-            <End Role="Users" EntitySet="Users" />
           </AssociationSet>
           <AssociationSet Name="FK_ShortInformation_Jury1" Association="Self.FK_ShortInformation_Jury1">
             <End Role="Users" EntitySet="Users" />
@@ -768,6 +752,22 @@
           <AssociationSet Name="FK_ShortInformation_Winner" Association="Self.FK_ShortInformation_Winner">
             <End Role="Users" EntitySet="Users" />
             <End Role="ShortInformation" EntitySet="ShortInformation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_Direction" Association="Self.FK_Users_Direction">
+            <End Role="UserDirection" EntitySet="UserDirection" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_Events" Association="Self.FK_Users_Events">
+            <End Role="UserEvents" EntitySet="UserEvents" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_Gendre" Association="Self.FK_Users_Gendre">
+            <End Role="UserGender" EntitySet="UserGender" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_Role" Association="Self.FK_Users_Role">
+            <End Role="UserRole" EntitySet="UserRole" />
+            <End Role="Users" EntitySet="Users" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -803,30 +803,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Direction">
-            <EntityTypeMapping TypeName="FedorConferentionModel.Direction">
-              <MappingFragment StoreEntitySet="Direction">
-                <ScalarProperty Name="ID_Direction" ColumnName="ID_Direction" />
-                <ScalarProperty Name="Direction1" ColumnName="Direction" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Events">
-            <EntityTypeMapping TypeName="FedorConferentionModel.Events">
-              <MappingFragment StoreEntitySet="Events">
-                <ScalarProperty Name="ID_Events" ColumnName="ID_Events" />
-                <ScalarProperty Name="Events1" ColumnName="Events" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Gendre">
-            <EntityTypeMapping TypeName="FedorConferentionModel.Gendre">
-              <MappingFragment StoreEntitySet="Gendre">
-                <ScalarProperty Name="ID_Gendre" ColumnName="ID_Gendre" />
-                <ScalarProperty Name="Gendre1" ColumnName="Gendre" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="PlanEvent">
             <EntityTypeMapping TypeName="FedorConferentionModel.PlanEvent">
               <MappingFragment StoreEntitySet="PlanEvent">
@@ -837,14 +813,6 @@
                 <ScalarProperty Name="City" ColumnName="City" />
                 <ScalarProperty Name="ImageName" ColumnName="ImageName" />
                 <ScalarProperty Name="ImagePhoto" ColumnName="ImagePhoto" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Role">
-            <EntityTypeMapping TypeName="FedorConferentionModel.Role">
-              <MappingFragment StoreEntitySet="Role">
-                <ScalarProperty Name="ID_Role" ColumnName="ID_Role" />
-                <ScalarProperty Name="Role1" ColumnName="Role" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -877,6 +845,38 @@
                 <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
                 <ScalarProperty Name="version" ColumnName="version" />
                 <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserDirection">
+            <EntityTypeMapping TypeName="FedorConferentionModel.UserDirection">
+              <MappingFragment StoreEntitySet="UserDirection">
+                <ScalarProperty Name="ID_Direction" ColumnName="ID_Direction" />
+                <ScalarProperty Name="Direction" ColumnName="Direction" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserEvents">
+            <EntityTypeMapping TypeName="FedorConferentionModel.UserEvents">
+              <MappingFragment StoreEntitySet="UserEvents">
+                <ScalarProperty Name="ID_Events" ColumnName="ID_Events" />
+                <ScalarProperty Name="Events" ColumnName="Events" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserGender">
+            <EntityTypeMapping TypeName="FedorConferentionModel.UserGender">
+              <MappingFragment StoreEntitySet="UserGender">
+                <ScalarProperty Name="ID_Gendre" ColumnName="ID_Gendre" />
+                <ScalarProperty Name="Gendre" ColumnName="Gendre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRole">
+            <EntityTypeMapping TypeName="FedorConferentionModel.UserRole">
+              <MappingFragment StoreEntitySet="UserRole">
+                <ScalarProperty Name="ID_Role" ColumnName="ID_Role" />
+                <ScalarProperty Name="Roles" ColumnName="Roles" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

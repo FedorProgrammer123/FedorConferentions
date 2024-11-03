@@ -11,6 +11,10 @@ namespace OrganisationConferention
     {
         public DbSet<PlanEvent> PlanEvent { get; set; }
         public DbSet<Users> Users { get; set; }
+        public DbSet<UserGender> Gendre { get; set; }
+        public DbSet<UserRole> Roles { get; set; }
+        public DbSet<UserEvents> UserEvents { get; set; }
+        public DbSet<UserDirection> Directions { get; set; }
         public DbSet<ShortInformation> ShortInformation { get; set; }
         private static Context _context;
         public Context() : base("name=FedorConferentionEntities")

@@ -38,7 +38,7 @@
             <TextBlock Grid.Row="1" Name="FIOLabel" FontFamily="Comic Sans MS"></TextBlock>
             <Button Content="Мероприятия" Grid.Row="1" FontFamily="Comic Sans MS" Width="200" Padding="10"></Button>
             <Button Content="Участники" Grid.Row="1" FontFamily="Comic Sans MS" Width="200" Margin="0 10 0 0" Padding="10"></Button>
-            <Button Content="Жюри" Grid.Row="1" FontFamily="Comic Sans MS" Width="200" Margin="0 10 0 0" Padding="10"></Button>
+            <Button Content="Жюри" Grid.Row="1" FontFamily="Comic Sans MS" Width="200" Margin="0 10 0 0" Padding="10" Click="Button_Click_1"></Button>
         </StackPanel>
         
     </Grid>

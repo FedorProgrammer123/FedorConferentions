@@ -28,30 +28,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Direction">
-      <EntityTypeMapping TypeName="FedorConferentionModel.Direction">
-        <MappingFragment StoreEntitySet="Direction">
-          <ScalarProperty Name="ID_Direction" ColumnName="ID_Direction" />
-          <ScalarProperty Name="Direction1" ColumnName="Direction" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Events">
-      <EntityTypeMapping TypeName="FedorConferentionModel.Events">
-        <MappingFragment StoreEntitySet="Events">
-          <ScalarProperty Name="ID_Events" ColumnName="ID_Events" />
-          <ScalarProperty Name="Events1" ColumnName="Events" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Gendre">
-      <EntityTypeMapping TypeName="FedorConferentionModel.Gendre">
-        <MappingFragment StoreEntitySet="Gendre">
-          <ScalarProperty Name="ID_Gendre" ColumnName="ID_Gendre" />
-          <ScalarProperty Name="Gendre1" ColumnName="Gendre" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="PlanEvent">
       <EntityTypeMapping TypeName="FedorConferentionModel.PlanEvent">
         <MappingFragment StoreEntitySet="PlanEvent">
@@ -62,14 +38,6 @@
           <ScalarProperty Name="City" ColumnName="City" />
           <ScalarProperty Name="ImageName" ColumnName="ImageName" />
           <ScalarProperty Name="ImagePhoto" ColumnName="ImagePhoto" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Role">
-      <EntityTypeMapping TypeName="FedorConferentionModel.Role">
-        <MappingFragment StoreEntitySet="Role">
-          <ScalarProperty Name="ID_Role" ColumnName="ID_Role" />
-          <ScalarProperty Name="Role1" ColumnName="Role" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -102,6 +70,38 @@
           <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
           <ScalarProperty Name="version" ColumnName="version" />
           <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserDirection">
+      <EntityTypeMapping TypeName="FedorConferentionModel.UserDirection">
+        <MappingFragment StoreEntitySet="UserDirection">
+          <ScalarProperty Name="ID_Direction" ColumnName="ID_Direction" />
+          <ScalarProperty Name="Direction" ColumnName="Direction" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserEvents">
+      <EntityTypeMapping TypeName="FedorConferentionModel.UserEvents">
+        <MappingFragment StoreEntitySet="UserEvents">
+          <ScalarProperty Name="ID_Events" ColumnName="ID_Events" />
+          <ScalarProperty Name="Events" ColumnName="Events" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserGender">
+      <EntityTypeMapping TypeName="FedorConferentionModel.UserGender">
+        <MappingFragment StoreEntitySet="UserGender">
+          <ScalarProperty Name="ID_Gendre" ColumnName="ID_Gendre" />
+          <ScalarProperty Name="Gendre" ColumnName="Gendre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRole">
+      <EntityTypeMapping TypeName="FedorConferentionModel.UserRole">
+        <MappingFragment StoreEntitySet="UserRole">
+          <ScalarProperty Name="ID_Role" ColumnName="ID_Role" />
+          <ScalarProperty Name="Roles" ColumnName="Roles" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

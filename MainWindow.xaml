@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OrganisationConferention"
         mc:Ignorable="d"
-        Title="Система, предназначенная для организаторов конференций по информационной безопасности" MinHeight="450" Height="450" Width="900" MaxWidth="1900" MinWidth="900" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+        Title="Система, предназначенная для организаторов конференций по информационной безопасности" MinHeight="900" Height="900" Width="1000" MaxWidth="1900" MinWidth="950" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="70"></RowDefinition>
